@@ -1,0 +1,137 @@
+.contact-us {
+  margin-inline: var(--default-margin-inline);
+  --contact-us-max-width: 500px;
+}
+
+.contact-us__details-container {
+  margin-inline: auto;
+  max-width: var(--contact-us-max-width);
+}
+
+.section__description {
+  margin-block: 1rem;
+  font-size: clamp(1rem, 1rem + 2vw, 2rem);
+}
+
+.contact-us__contacts {
+  margin-block: 2rem;
+  width: fit-content;
+}
+
+.contact-us__main-title {
+  text-align: left;
+  text-transform: uppercase;
+  color: var(--clr-accent);
+  font-size: clamp(2rem, 1rem + 3vw, var(--section-title-size));
+  font-weight: 300;
+  font-family: var(--font-secondary);
+  letter-spacing: 2px;
+  margin-top: 5rem;
+  line-height: 1.1;
+}
+
+.contact-us__contact {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.contact-us__link {
+  color: var(--clr-text-primary);
+  text-decoration: none;
+  transition: color 250ms ease-in;
+  letter-spacing: 1px;
+  cursor: pointer;
+  max-width: 40ch;
+}
+
+.contact-us__link:hover {
+  color: var(--clr-accent);
+}
+
+.contact-us__icon {
+  font-size: 2rem;
+  color: var(--clr-accent);
+  flex-shrink: 0;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  margin-inline: auto;
+  padding-block: 2rem;
+  max-width: var(--contact-us-max-width);
+}
+
+.contact-form__input {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid var(--clr-accent);
+  outline: transparent;
+  padding: 1rem 0rem;
+  color: var(--clr-text-primary);
+  font-size: 1.25rem;
+  transition: border 250ms ease-in;
+}
+
+.contact-form__input:focus {
+  border-color: var(--clr-text-primary);
+}
+
+.contact-form__label {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--clr-accent);
+  font-weight: bold;
+}
+
+.contact-form__button {
+  padding-block: 0.25rem;
+  margin-bottom: 2rem;
+}
+
+.contact-form__feedback {
+  opacity: 0;
+  transform: translateY(100%);
+  color: var(--clr-text-primary);
+  text-align: center;
+  height: 1rem;
+}
+
+.contact-form__feedback--fade-up {
+  animation: fadeUp 1s ease-in-out forwards;
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (min-width: 1000px) {
+  .contact-us {
+    display: flex;
+    margin-top: 5rem;
+  }
+
+  .contact-us > * {
+    flex: 1;
+  }
+
+  .contact-us__main-title {
+    margin-top: 0px;
+  }
+
+  .contact-form {
+    padding-block: 1rem;
+  }
+}
