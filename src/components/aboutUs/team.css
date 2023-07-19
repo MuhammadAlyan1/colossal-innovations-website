@@ -1,0 +1,113 @@
+.team {
+  margin-inline: var(--default-margin-inline);
+  padding-block: 10rem;
+  --team-member-padding: 2rem;
+  --image-size: 150px;
+  --member-min-width: 250px;
+}
+
+.team__members-container {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.team__members-container > * {
+  flex: 1;
+}
+
+.team__member {
+  padding: var(--team-member-padding);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: var(--member-min-width);
+}
+
+.team__image-container {
+  border-radius: 50%;
+  overflow: hidden;
+  width: var(--image-size);
+  height: var(--image-size);
+}
+
+.team__image {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.team__name {
+  font-weight: 500;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  width: max-content;
+}
+
+.team__position {
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 2px;
+}
+
+.team__socials-container {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.team__social {
+  font-size: 2rem;
+  color: var(--clr-text-primary);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 250ms ease-in;
+  color: var(--clr-accent);
+}
+
+.team__social:hover {
+  color: var(--clr-text-primary);
+}
+
+.team__join {
+  min-width: var(--member-min-width);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.team__join-icon {
+  width: var(--image-size);
+  height: var(--image-size);
+  margin-inline: auto;
+}
+
+.team__join-button {
+  background-color: var(--clr-accent);
+  border-radius: 5px;
+  color: var(--clr-text-primary);
+  cursor: pointer;
+  font-family: var(--font-secondary);
+  font-weight: 600;
+  margin-inline: auto;
+  margin-top: 2rem;
+  padding: 0.5rem 2.5rem;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 250ms ease-in;
+}
+
+.team__join-button:hover {
+  background-color: transparent;
+  outline: 1px solid var(--clr-text-primary);
+}

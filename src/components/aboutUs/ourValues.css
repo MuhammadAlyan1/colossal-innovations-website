@@ -1,0 +1,10 @@
+.our-values {
+  margin-inline: var(--default-margin-inline);
+  margin-top: 5rem;
+}
+
+.our-values__description {
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
