@@ -82,6 +82,11 @@
     align-items: center;
     background-color: transparent;
     padding: 0 0.5rem;
+    transition: background-color 200ms ease-in;
+  }
+
+  .navbar--active {
+    background-color: var(--clr-bg-primary);
   }
 
   .navbar__list {

@@ -1,6 +1,8 @@
 import React from 'react';
 import colossalInnovationLogo from '../../assets/Colossal-logo.png';
 import './navbar.css';
+import { linkItems } from '../../data';
+
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { IoMdClose } from 'react-icons/io';
 import { useState } from 'react';
@@ -8,14 +10,15 @@ import { useState } from 'react';
 const Navbar = () => {
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
   const [activeLink, setActiveLink] = useState('home');
-  const linkItems = [
-    { name: 'home', href: '#home' },
-    { name: 'about us', href: '#aboutUs' },
-    { name: 'services', href: '#services' },
-    { name: 'our work', href: '#ourWork' },
-    { name: 'blog', href: '#blog' },
-    { name: 'careers', href: '#careers' },
-  ];
+  const [isNavbarTransparent, setIsNavbarTransparent] = useState(true);
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY == 0) {
+      setIsNavbarTransparent(true);
+    } else {
+      setIsNavbarTransparent(false);
+    }
+  });
 
   return (
     <>
@@ -33,7 +36,7 @@ const Navbar = () => {
       <nav
         className={`navbar ${
           isNavbarOpen ? 'navbar--visible' : 'navbar--hidden'
-        }`}
+        } ${isNavbarTransparent ? '' : 'navbar--active'}`}
       >
         <img
           className="navbar__logo"
@@ -60,10 +63,9 @@ const Navbar = () => {
             );
           })}
         </ul>
-
-        <div>
-          <button className="button">Get in Touch</button>
-        </div>
+        <a role="button" href="#contactUs" className="button">
+          Get in Touch
+        </a>
       </nav>
     </>
   );
