@@ -45,8 +45,8 @@
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: var(--clr-text-primary);
-  margin-top: 1rem;
+  color: var(--clr-text-secondary);
+  margin-top: 2rem;
 }
 
 .footer__map {

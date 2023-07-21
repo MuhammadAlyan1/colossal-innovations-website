@@ -1,8 +1,10 @@
 import React from 'react';
 import { useState } from 'react';
 import { InView } from 'react-intersection-observer';
+import { useNavigate } from 'react-router-dom';
 
-const Article = ({ title, image, author, description }) => {
+const Article = ({ id, title, image, author, description }) => {
+  const navigate = useNavigate();
   const [inView, setInView] = useState(false);
   const SHORT_DESCRIPTION_LENGTH = 200;
   function truncateText(text, maxTextLength = 200) {
@@ -21,6 +23,10 @@ const Article = ({ title, image, author, description }) => {
       className={`blog__article ${inView ? 'slide-in-fade' : 'hidden-left'}`}
       onChange={setInView}
       threshold={0.1}
+      onClick={() => {
+        navigate(`/blogs/${id}`);
+        window.scrollTo(0, 0);
+      }}
     >
       <div className="blog__image-container">
         <img className="blog__image" src={image} alt={title} />

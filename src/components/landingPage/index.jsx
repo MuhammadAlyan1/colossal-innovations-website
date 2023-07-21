@@ -3,6 +3,7 @@ import backgroundVideo from '../../assets/video7.mp4';
 import './landingPage.css';
 import { InView } from 'react-intersection-observer';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const LandingPage = () => {
   const [inView, setInView] = useState(false);
@@ -32,15 +33,16 @@ const LandingPage = () => {
           threshold={1}
           className={inView ? 'slide-up-fade--slow' : 'hidden-bottom'}
         >
-          <a
+          <Link
             role="button"
-            href="#contactUs"
+            to="/contact-us"
+            onClick={() => window.scrollTo(0, 0)}
             className={`button ${
               inView ? 'slide-up-fade--slow' : 'hidden-bottom'
             }`}
           >
             Get in Touch
-          </a>
+          </Link>
         </InView>
       </section>
     </div>

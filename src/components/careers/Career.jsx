@@ -1,9 +1,13 @@
 import React from 'react';
 import { InView } from 'react-intersection-observer';
 import { useState } from 'react';
-const Career = ({ title, description, tags }) => {
+import { useNavigate } from 'react-router-dom';
+
+const Career = ({ id, title, description, tags }) => {
+  const navigate = useNavigate();
   const [inView, setInView] = useState(false);
   const [inViewButton, setInViewButton] = useState(false);
+
   return (
     <InView
       as="section"
@@ -33,6 +37,10 @@ const Career = ({ title, description, tags }) => {
         threshold={1}
         delay={200}
         onChange={setInViewButton}
+        onClick={() => {
+          navigate(`/careers/${id}`);
+          window.scrollTo(0, 0);
+        }}
         className={`career__apply ${
           inViewButton ? 'slide-in-fade' : 'hidden-bottom'
         }`}

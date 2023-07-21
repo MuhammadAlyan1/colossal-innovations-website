@@ -1,0 +1,28 @@
+.errorPage {
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+.errorPage__description {
+  text-align: center;
+  margin-inline: auto;
+  max-width: 90ch;
+}
+
+.errorPage__assistance {
+  text-align: center;
+  margin-inline: auto;
+  max-width: 90ch;
+}
+
+.errorPage__email {
+  text-decoration: underline;
+  color: var(--clr-accent);
+}
+
+.errorPage__link-button {
+  display: block;
+  margin-block: 1rem;
+  max-width: fit-content;
+  margin-inline: auto;
+}
