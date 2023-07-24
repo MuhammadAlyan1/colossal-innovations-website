@@ -5,7 +5,7 @@ const Value = ({ id, title, image, description }) => {
   const [inView, setInView] = useState(false);
 
   return (
-    <InView as="section" classID="card" onChange={setInView} threshold={0.3}>
+    <InView as="section" className="card" onChange={setInView} threshold={0.3}>
       <img
         className={`card__image ${inView ? 'scale-100' : 'scale-80'}`}
         src={image}

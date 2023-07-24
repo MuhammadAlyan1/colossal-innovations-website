@@ -1,6 +1,28 @@
 .errorPage {
   text-align: center;
   font-size: 1.25rem;
+  background: url('../../assets/404/astronaut-transparent.png'),
+    linear-gradient(to right, rgba(0 0 0 / 0.8), rgba(0 0 0 / 0.8));
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+  font-weight: bold;
+  color: white;
+}
+
+.errorPage__image-container {
+  max-width: 500px;
+  margin-inline: auto;
+  margin-block: 1rem;
+}
+
+.errorPage__image {
+  display: block;
+  width: 100%;
 }
 
 .errorPage__description {
@@ -16,8 +38,9 @@
 }
 
 .errorPage__email {
+  color: #d46b47;
   text-decoration: underline;
-  color: var(--clr-accent);
+  letter-spacing: 1px;
 }
 
 .errorPage__link-button {

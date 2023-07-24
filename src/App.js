@@ -14,22 +14,24 @@ import ContactUsPage from './pages/contactUsPage/index';
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<SharedLayout />}>
-          <Route index element={<Home />} />
-          <Route path="/about" element={<AboutUsPage />} />
-          <Route path="/our-work" element={<OurWorkPage />} />
-          <Route path="/services" element={<ServicesPage />} />
-          <Route path="/careers" element={<CareersPage />} />
-          <Route path="/careers/:careerID" element={<CareerDetails />} />
-          <Route path="/blogs" element={<BlogsPage />} />
-          <Route path="blogs/:blogID" element={<BlogDetails />} />
-          <Route path="contact-us" element={<ContactUsPage />} />
+    <div className="">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<SharedLayout />}>
+            <Route index element={<Home />} />
+            <Route path="/about" element={<AboutUsPage />} />
+            <Route path="/our-work" element={<OurWorkPage />} />
+            <Route path="/services" element={<ServicesPage />} />
+            <Route path="/careers" element={<CareersPage />} />
+            <Route path="/careers/:careerID" element={<CareerDetails />} />
+            <Route path="/blogs" element={<BlogsPage />} />
+            <Route path="blogs/:blogID" element={<BlogDetails />} />
+            <Route path="contact-us" element={<ContactUsPage />} />
+          </Route>
           <Route path="*" element={<Error />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 

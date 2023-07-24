@@ -6,6 +6,10 @@
   margin-inline: var(--default-margin-inline);
 }
 
+.about__introduction {
+  margin-top: 3rem;
+}
+
 .about__quote-container {
   display: flex;
   flex-direction: column;

@@ -61,6 +61,7 @@
   flex-direction: column;
   margin-inline: auto;
   padding-block: 2rem;
+  padding-inline: 1rem;
   max-width: var(--contact-us-max-width);
 }
 

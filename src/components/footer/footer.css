@@ -7,8 +7,31 @@
 }
 
 .footer__logo {
-  max-width: 200px;
-  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+}
+
+.footer__logo-icon {
+  width: 70px;
+}
+
+.footer__logo-uppertext {
+  color: var(--clr-text-primary);
+  font-size: 1.75rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: var(--font-secondary);
+  margin-bottom: -15px;
+}
+
+.footer__logo-lowertext {
+  color: var(--clr-accent);
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: var(--font-secondary);
 }
 
 .footer__contacts-container {

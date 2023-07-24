@@ -1,24 +1,36 @@
 import React from 'react';
-import colossalInnovationLogo from '../../assets/Colossal-logo.png';
 import './navbar.css';
 import { linkItems } from '../../data';
 import { Link, NavLink } from 'react-router-dom';
+import { InView } from 'react-intersection-observer';
 
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { IoMdClose } from 'react-icons/io';
 import { useState } from 'react';
+import logo from '../../assets/logo.png';
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 const Navbar = () => {
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
   const [isNavbarTransparent, setIsNavbarTransparent] = useState(true);
+  const location = useLocation();
 
   window.addEventListener('scroll', () => {
-    if (window.scrollY == 0) {
+    if (location.pathname === '/' && window.scrollY === 0) {
       setIsNavbarTransparent(true);
     } else {
       setIsNavbarTransparent(false);
     }
   });
+
+  useEffect(() => {
+    if (location.pathname === '/' && window.scrollY === 0) {
+      setIsNavbarTransparent(true);
+    } else {
+      setIsNavbarTransparent(false);
+    }
+  }, [location]);
 
   return (
     <>
@@ -38,11 +50,13 @@ const Navbar = () => {
           isNavbarOpen ? 'navbar--visible' : 'navbar--hidden'
         } ${isNavbarTransparent ? '' : 'navbar--active'}`}
       >
-        <img
-          className="navbar__logo"
-          src={colossalInnovationLogo}
-          alt="Colossal Innovation"
-        />
+        <div className="logo">
+          <img src={logo} alt="Colossal Innovations" className="logo__icon" />
+          <div className="logo__text">
+            <p className="logo__uppertext">Colossal</p>
+            <p className="logo__lowertext">Innovations</p>
+          </div>
+        </div>
         <ul className="navbar__list">
           {linkItems.map((item) => {
             return (

@@ -103,7 +103,7 @@ const CareerDetails = () => {
           as="input"
           type="submit"
           value="Apply now"
-          threshold="1"
+          threshold="0.5"
           onChange={setInView}
           className={`contact-form__button button ${
             inView ? 'slide-up-fade--slow' : 'hidden-bottom'

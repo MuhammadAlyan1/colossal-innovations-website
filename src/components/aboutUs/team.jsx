@@ -15,7 +15,7 @@ const Team = () => {
       as="section"
       onChange={setInView}
       className={`team`}
-      threshold="0.5"
+      threshold="0.1"
     >
       <h2 className="section__main-title">Innovation Visionaries</h2>
       <div

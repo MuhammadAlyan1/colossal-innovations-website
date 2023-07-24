@@ -1,10 +1,13 @@
 import { Link } from 'react-router-dom';
 import './Error.css';
+import errorText from '../../assets/404/404-text.png';
 
 const Error = () => {
   return (
     <section className="errorPage">
-      <h2 className="section__main-title">404 Page Not Found</h2>
+      <div className="errorPage__image-container">
+        <img className="errorPage__image" src={errorText} alt="404" />
+      </div>
       <p className="errorPage__description">
         We regret to inform you that the page you are attempting to access
         cannot be found. It appears that the link you followed may be outdated,

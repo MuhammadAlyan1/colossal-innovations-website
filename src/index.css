@@ -10,12 +10,8 @@ html {
 :root,
 * {
   --clr-accent: #d46b47;
-  --clr-text-primary: #fff;
-  --clr-text-secondary: #b9b4b4;
   --font-secondary: 'Poppins', Sans-serif;
   --font-primary: 'Dosis', Sans-serif;
-  --clr-bg-primary: #0e1111;
-  --clr-bg-secondary: #1e2121;
   --default-margin-inline: 10%;
   --section-title-size: 4rem;
   box-sizing: border-box;
@@ -183,7 +179,7 @@ CARDS
   filter: blur(0px);
   opacity: 1;
   transform: translateX(0%);
-  transition: all 250ms ease-in 350ms;
+  transition: all 250ms ease-in 150ms;
 }
 
 .scale-full {

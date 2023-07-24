@@ -1,5 +1,5 @@
 import React from 'react';
-import backgroundVideo from '../../assets/video7.mp4';
+import backgroundVideo from '../../assets/solar.mp4';
 import './landingPage.css';
 import { InView } from 'react-intersection-observer';
 import { useState } from 'react';
@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 
 const LandingPage = () => {
   const [inView, setInView] = useState(false);
+
   return (
     <div className="hero-section" id="home">
       <div className="hero-section__overlay"></div>

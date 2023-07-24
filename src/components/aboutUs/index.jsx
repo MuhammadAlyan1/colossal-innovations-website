@@ -5,6 +5,7 @@ import OurValues from './ourValues';
 import Team from './team';
 import AboutUsSection from './AboutUsSection';
 import Introduction from './Introduction';
+import '../../index.css';
 
 const AboutUS = () => {
   return (

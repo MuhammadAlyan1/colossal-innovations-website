@@ -1,6 +1,6 @@
 import React from 'react';
 import './footer.css';
-import colossalInnovationLogo from '../../assets/Colossal-logo.png';
+import logo from '../../assets/logo.png';
 
 import { HiOutlineLocationMarker } from 'react-icons/hi';
 import { BsTelephone } from 'react-icons/bs';
@@ -12,11 +12,17 @@ const Footer = () => {
     <footer className="footer">
       <section className="footer__content">
         <div className="footer__contacts-container">
-          <img
-            className="footer__logo"
-            src={colossalInnovationLogo}
-            alt="Colossal Innovation"
-          />
+          <div className="footer__logo">
+            <img
+              src={logo}
+              alt="Colossal Innovations"
+              className="footer__logo-icon"
+            />
+            <div className="footer__logo-text">
+              <p className="footer__logo-uppertext">Colossal</p>
+              <p className="footer__logo-lowertext">Innovations</p>
+            </div>
+          </div>
           <div className="footer__contact">
             <HiOutlineLocationMarker className="footer__icon" />
             <a

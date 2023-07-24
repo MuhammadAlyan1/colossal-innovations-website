@@ -49,6 +49,7 @@ const Stats = () => {
       <div className="counter">
         <p className="counter__amount">
           <CountUp
+            enableScrollSpy={true}
             end={SATISFACTION_PERCENTAGE}
             duration={COUNT_ANIMATION_DURATION_SECONDS}
             start={0}
