@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { InView } from 'react-intersection-observer';
 import { useNavigate } from 'react-router-dom';
 
-const Article = ({ id, title, image, author, description }) => {
+const Article = ({ _id, title, image, description }) => {
   const navigate = useNavigate();
   const [inView, setInView] = useState(false);
   const SHORT_DESCRIPTION_LENGTH = 200;
@@ -24,7 +24,7 @@ const Article = ({ id, title, image, author, description }) => {
       onChange={setInView}
       threshold={0.1}
       onClick={() => {
-        navigate(`/blogs/${id}`);
+        navigate(`/blogs/${_id}`);
         window.scrollTo(0, 0);
       }}
     >
@@ -32,7 +32,7 @@ const Article = ({ id, title, image, author, description }) => {
         <img className="blog__image" src={image} alt={title} />
       </div>
       <div className="blog__contents">
-        <p className="blog__author ">By {author}</p>
+        <p className="blog__author ">By Colossal Innovations</p>
         <h3 className="blog__title ">{title}</h3>
         <p className="blog__description">
           {truncateText(description, SHORT_DESCRIPTION_LENGTH)}

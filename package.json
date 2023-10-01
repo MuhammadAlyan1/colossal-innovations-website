@@ -2,11 +2,13 @@
   "name": "colossal-innovation-website",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://colossalinnovationsco.com/",
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.5.1",
     "react": "^18.2.0",
     "react-countup": "^6.4.2",
     "react-dom": "^18.2.0",
@@ -15,6 +17,7 @@
     "react-markdown": "^8.0.7",
     "react-router-dom": "^6.14.2",
     "react-scripts": "5.0.1",
+    "react-share": "^4.4.1",
     "remark-gfm": "^3.0.1",
     "swiper": "^10.0.4",
     "web-vitals": "^2.1.4"

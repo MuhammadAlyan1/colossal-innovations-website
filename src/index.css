@@ -187,3 +187,23 @@ CARDS
   opacity: 1;
   transition: all 250ms ease-in;
 }
+
+/*
+======================= 
+share
+======================= 
+*/
+
+.share {
+  margin-top: 3rem;
+}
+
+.share__title {
+  font-size: 1.5rem;
+  color: var(--clr-accent);
+  text-transform: uppercase;
+}
+
+.share__button {
+  margin-right: 1rem;
+}

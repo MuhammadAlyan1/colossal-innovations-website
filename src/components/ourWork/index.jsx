@@ -7,7 +7,7 @@ const OurWork = () => {
   return (
     <section id="ourWork" className="ourWork">
       <Portfolio />
-      <Testimonials />s
+      <Testimonials />
     </section>
   );
 };

@@ -3,7 +3,7 @@ import { InView } from 'react-intersection-observer';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const Career = ({ id, title, description, tags }) => {
+const Career = ({ _id, title, description, tags }) => {
   const navigate = useNavigate();
   const [inView, setInView] = useState(false);
   const [inViewButton, setInViewButton] = useState(false);
@@ -38,7 +38,7 @@ const Career = ({ id, title, description, tags }) => {
         delay={200}
         onChange={setInViewButton}
         onClick={() => {
-          navigate(`/careers/${id}`);
+          navigate(`/careers/${_id}`);
           window.scrollTo(0, 0);
         }}
         className={`career__apply ${

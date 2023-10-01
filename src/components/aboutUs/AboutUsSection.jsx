@@ -23,7 +23,8 @@ const AboutUsSection = ({ id, image, title, description }) => {
       </div>
       <div className="about__content">
         <p
-          role="title"
+          role="heading"
+          aria-level="4"
           className={`about__title transition-delay ${
             inView ? 'slide-in-fade' : 'hidden-top'
           }`}

@@ -1,14 +1,20 @@
 import React from 'react';
 import { InView } from 'react-intersection-observer';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-const Project = ({ title, tags, image }) => {
+const Project = ({ _id, title, tags, image }) => {
   const [inView, setInView] = useState(false);
+  const navigate = useNavigate();
   return (
     <InView
       as="section"
       onChange={setInView}
       className={`project ${inView ? 'slide-in-fade' : 'hidden-left'}`}
+      onClick={() => {
+        navigate(`/our-work/${_id}`);
+        window.scrollTo(0, 0);
+      }}
     >
       <div className="project__image-container">
         <img className="project__image" src={image} alt={title} />

@@ -16,7 +16,7 @@ const TeamMember = ({
       <div className="team__image-container">
         <img className="team__image" src={image} alt={name} loading="lazy" />
       </div>
-      <p role="title" className="team__name">
+      <p role="heading" aria-level="5" className="team__name">
         {name}
       </p>
       <p className="team__position">{position}</p>

@@ -74,6 +74,7 @@ const Footer = () => {
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13280.085886104882!2d72.9804534!3d33.6825082!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38dfbd370f4597b9%3A0xd9795b7af677db1a!2sColossal%20Innovations!5e0!3m2!1sen!2s!4v1689259359242!5m2!1sen!2s"
           width={'100%'}
+          title="Colossal Innovations google maps location"
           style={{ border: 0 }}
           allowFullScreen=""
           loading={'lazy'}

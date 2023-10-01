@@ -2,8 +2,6 @@ import React from 'react';
 import './navbar.css';
 import { linkItems } from '../../data';
 import { Link, NavLink } from 'react-router-dom';
-import { InView } from 'react-intersection-observer';
-
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { IoMdClose } from 'react-icons/io';
 import { useState } from 'react';

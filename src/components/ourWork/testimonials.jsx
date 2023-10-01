@@ -21,10 +21,11 @@ const Testimonials = () => {
           scale: 0.8,
         }}
         spaceBetween={0}
+        grabCursor={true}
         centeredSlides={true}
         autoplay={{
           disableOnInteraction: false,
-          delay: 2500,
+          delay: 3500,
         }}
         breakpoints={{
           640: {

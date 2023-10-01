@@ -15,10 +15,7 @@ const Theme = ({ isDarkTheme, setIsDarkTheme }) => {
     document.documentElement.style.setProperty('--clr-text-primary', '#222');
     document.documentElement.style.setProperty('--clr-text-secondary', '#333');
     document.documentElement.style.setProperty('--clr-bg-primary', '#fff');
-    document.documentElement.style.setProperty(
-      '--clr-bg-secondary',
-      '#e0ad6b86'
-    );
+    document.documentElement.style.setProperty('--clr-bg-secondary', '#e6e8ea');
   }
   return (
     <div

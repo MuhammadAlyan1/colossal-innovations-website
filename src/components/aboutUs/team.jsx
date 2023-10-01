@@ -5,7 +5,6 @@ import { AiOutlineUserAdd } from 'react-icons/ai';
 import TeamMember from './TeamMember';
 import { useState } from 'react';
 import { InView } from 'react-intersection-observer';
-import { linkItems } from '../../data';
 import { Link } from 'react-router-dom';
 
 const Team = () => {
